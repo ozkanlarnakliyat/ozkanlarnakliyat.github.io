@@ -146,23 +146,35 @@
             transform: scale(1.05);
         }
 
-        /* --- 6. BÖLÜM: YORUMLAR (İsteğe bağlı) --- */
+        /* --- 6. BÖLÜM: YORUMLAR (GÜNCELLENDİ) --- */
         #testimonials {
             background-color: #ecf0f1;
         }
-        .testimonial-card {
+        #testimonials .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        #testimonials .testimonial-card {
             background: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            max-width: 700px;
-            margin: 20px auto;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: left; /* Yorumları sola hizalar */
+            margin: 0; /* Eski 'auto' marjını sıfırlar */
         }
-        .testimonial-card p {
-            font-style: italic;
+        #testimonials .testimonial-card p.stars {
+            font-size: 1.5rem;
+            color: #f39c12; /* Altın sarısı yıldız rengi */
             margin-bottom: 10px;
+            padding: 0;
         }
-        .testimonial-card span {
+        #testimonials .testimonial-card p.comment-text {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        #testimonials .testimonial-card span.client-name {
             font-weight: bold;
             color: #e74c3c;
         }
@@ -349,13 +361,32 @@
     <section id="testimonials">
         <div class="container">
             <h2>Müşterilerimiz Ne Dedi?</h2>
-            <div class="testimonial-card">
-                <p>"Söyledikleri saatte geldiler, eşyalarıma hiç zarar vermeden hızlıca taşıdılar. Çok memnun kaldım."</p>
-                <span>- Ayşe Y. / Kadıköy Taşıma</span>
-            </div>
-            <div class="testimonial-card">
-                <p>"Şehirler arası taşımada Özkanlar Nakliyat'ı tercih ettim. Başta tereddütlerim vardı ama profesyonelliklerine hayran kaldım."</p>
-                <span>- Mehmet K. / Ankara Taşıma</span>
+            <p>Google İşletme profilimizden gerçek müşteri deneyimleri.</p>
+            
+            <div class="testimonial-grid"> <div class="testimonial-card">
+                    <p class="stars">★★★★★</p>
+                    <p class="comment-text">
+                        "2. Kez ev taşıyoruz Özkan nakliyat ile hem müşteri odaklı hizmeti hem de eşyalara zarar vermeden çok hızlı bir şekilde yeni evimize geçtik. Özenle eşyalar taşındı ve muhafaza edildi. Tavsiye ediyorum asla pişman olmayacaksınız. Çok teşekkür ederiz iyi ki sizlerle çalışma şansı yakaladık."
+                    </p>
+                    <span class="client-name">- Gamze Ş. / Google Yorumu</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="stars">★★★★★</p>
+                    <p class="comment-text">
+                        "İstanbul içi taşımacılık yaptım. 20-25 farklı nakliye şirketi içerisinden Özkanlar Nakliyatı seçtim. Arkadaşlar çok ilgili, hızlı ve özenli taşıyorlar. Bütün eşyaları sapasağlam korumaya alıp taşıdılar. Alanında uzman marangoz ve diğer teknik personelleriyle ekonomik ve güvenli bir tercih yapmışım. Kesinlikle tavsiye ediyorum."
+                    </p>
+                    <span class="client-name">- Ayhan B. / Google Yorumu</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="stars">★★★★★</p>
+                    <p class="comment-text">
+                        "İşini özenle, titizlikle ve ilgiyle yapan başta Recep Bey olmak üzere, bütün Özkanlar Nakliyat ekibine teşekkür ediyorum. Her bir eşyamı kendi eşyaları gibi özenle taşıdılar. Herkese tavsiye edeceğim. İyi çalışmalar dilerim."
+                    </p>
+                    <span class="client-name">- Ayberk T. / Google Yorumu</span>
+                </div>
+
             </div>
         </div>
     </section>
