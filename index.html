@@ -204,30 +204,24 @@
             .trust-container { flex-direction: column; align-items: center; }
         }
         
-        /* --- VİDEO İÇİN EN İYİ ÇÖZÜM (HEM ÇALIŞAN HEM KISA) --- */
+        /* --- ORİJİNAL ÇALIŞAN VİDEO CSS (AŞIRI UZUN HALİ) --- */
         #videos {
-            background-color: #fff;
+            background-color: #fff; /* Arka plan rengi */
         }
-        .video-kisaltilmis-wrapper {
+        .video-wrapper-shorts {
             position: relative;
-            /* BU YENİ ORAN:
-               Beğendiğiniz 300px genişlik ve 450px yüksekliğin 
-               oranıdır. (450 / 300 = 1.5, yani 150%)
-               Bu, 177.77%'den daha kısadır ve hata vermemelidir.
-            */
-            padding-bottom: 150%; 
+            /* Bu, 9:16 dikey video oranıdır (aşırı uzun olan) */
+            padding-bottom: 177.77%; 
             height: 0;
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             
-            /* Genişliğini 300px ile sabitliyoruz */
-            width: 300px; 
-            /* Ama mobilde taşmasın diye max-width ekliyoruz */
-            max-width: 100%; 
-            margin: 40px auto; /* Ortalar */
+            /* Videonun masaüstünde çok büyümesini engeller ve ortalar */
+            max-width: 350px; 
+            margin: 0 auto; 
         }
-        .video-kisaltilmis-wrapper iframe {
+        .video-wrapper-shorts iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -340,7 +334,8 @@
             <h2>Çalışmamızdan Video</h2>
             <p>Taşıma sürecini nasıl yönettiğimizi bizzat görün.</p>
             
-            <div class="video-kisaltilmis-wrapper"> <iframe src="https://www.youtube.com/embed/BURAYA_SHORTS_ID_GELECEK" 
+            <div class="video-wrapper-shorts"> 
+                <iframe src="https://www.youtube.com/embed/j_JTFR7a06I" 
                     title="YouTube video player" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
