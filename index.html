@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özkan Nakliyat - Güvenle Taşının</title>
+    <meta name="description" content="Özkan Nakliyat ile sigortalı, asansörlü ve profesyonel evden eve nakliyat hizmeti. Hızlı ve ücretsiz teklif alın.">
+    <style>
+        /* --- TEMEL AYARLAR --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        /* --- BUTONLAR (ÇOK ÖNEMLİ) --- */
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .btn-call {
+            background-color: #e74c3c; /* Kırmızı */
+        }
+        .btn-whatsapp {
+            background-color: #25D366; /* Yeşil */
+        }
+
+        /* --- 1. BÖLÜM: GİRİŞ (VİTRİN) --- */
+        #hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('8.jpeg'); /* !! FOTOĞRAFI DEĞİŞTİR !! */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 120px 0;
+        }
+        #hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+        #hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* --- 2. BÖLÜM: GÜVEN BARI --- */
+        #trust {
+            background-color: #ecf0f1;
+            padding: 40px 0;
+        }
+        .trust-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .trust-item {
+            flex-basis: 250px;
+            margin: 15px;
+        }
+        .trust-item h3 {
+            font-size: 1.3rem;
+            color: #34495e;
+        }
+        /* Ikonlar için basit emoji kullandık, daha profesyonel görünebilir */
+        .trust-item span {
+            font-size: 2.5rem;
+        }
+
+        /* --- 3. BÖLÜM: HİZMETLER --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        .service-card h3 {
+            color: #e74c3c;
+        }
+
+        /* --- 4. BÖLÜM: HAKKIMIZDA (NEDEN BİZ?) --- */
+        #about {
+            background-color: #fff;
+        }
+        #about p {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+        }
+
+        /* --- 5. BÖLÜM: GALERİ --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- 6. BÖLÜM: YORUMLAR (İsteğe bağlı) --- */
+        #testimonials {
+            background-color: #ecf0f1;
+        }
+        .testimonial-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .testimonial-card span {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        /* --- 7. BÖLÜM: FİNAL İLETİŞİM --- */
+        #contact {
+            background-color: #2c3e50;
+            color: #fff;
+        }
+        #contact h2 {
+            color: #fff;
+        }
+        #contact p {
+            font-size: 1.2rem;
+        }
+        .contact-details {
+            margin-top: 30px;
+            font-size: 1.1rem;
+        }
+        .contact-details a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* --- FOOTER (En Alt) --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* --- MOBİL UYUMLULUK --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem !important; }
+            h2 { font-size: 2rem !important; }
+            .trust-container { flex-direction: column; align-items: center; }
+        }
+        
+        /* --- 1 DİKEY VİDEO İÇİN CSS --- */
+        #videos {
+            background-color: #fff; /* Arka plan rengi */
+        }
+        .video-wrapper-shorts {
+            position: relative;
+            padding-bottom: 177.77%; /* 9:16 dikey video oranı */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            
+            /* Videonun masaüstünde çok büyümesini engeller ve ortalar */
+            max-width: 350px; 
+            margin: 0 auto; 
+        }
+        .video-wrapper-shorts iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Özkanlar Nakliyat ile Güvenle Taşının</h1>
+            <p>Sigortalı, Asansörlü ve Profesyonel Evden Eve Nakliyat Hizmetleri</p>
+            
+            <a href="tel:+905364842127" class="cta-button btn-call">
+                📞 Hemen Arayın: 0536 484 21 27
+            </a>
+            <a href="https://wa.me/+905364842127?text=Merhaba, sitenizden ulaşıyorum. Nakliyat hizmeti hakkında bilgi almak istiyorum." class="cta-button btn-whatsapp" target="_blank">
+                💬 WhatsApp'tan Fiyat Alın
+            </a>
+        </div>
+    </section>
+
+    <section id="trust">
+        <div class="container trust-container">
+            <div class="trust-item">
+                <span>🛡️</span>
+                <h3>Sigortalı Taşıma</h3>
+                <p>Eşyalarınız yolculuk boyunca güvencemiz altındadır.</p>
+            </div>
+            <div class="trust-item">
+                <span>🚚</span>
+                <h3>Profesyonel Ekip</h3>
+                <p>Kendi alanında uzman, tecrübeli ve güler yüzlü personel.</p>
+            </div>
+            <div class="trust-item">
+                <span>🏢</span>
+                <h3>Asansörlü Nakliyat</h3>
+                <p>Yüksek katlar ve dar merdivenler artık sorun değil.</p>
+            </div>
+            <div class="trust-item">
+                <span>👍</span>
+                <h3>Müşteri Memnuniyeti</h3>
+                <p>Tüm operasyonumuzu %100 memnuniyet üzerine kurarız.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Hizmetlerimiz</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Evden Eve Nakliyat</h3>
+                    <p>Evinizi özenle paketliyor, yeni adresinize güvenle taşıyor ve istediğiniz gibi yerleştiriyoruz.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Şehirler Arası Nakliyat</h3>
+                    <p>Türkiye'nin her noktasına, özel tasarlanmış araçlarımız ve sigorta güvencesiyle hizmet veriyoruz.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Ofis & Büro Taşıma</h3>
+                    <p>İş kaybı yaşatmadan, ofis mobilyalarınızı ve elektronik eşyalarınızı titizlikle taşıyoruz.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Eşya Paketleme</h3>
+                    <p>Kırılacak, hassas tüm eşyalarınızı özel ambalaj malzemelerimiz (patpat, köpük) ile korumaya alıyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Neden Özkanlar Nakliyat?</h2>
+            <p>
+                10 yılı aşkın tecrübemizle, nakliyat sektöründe güvenin adresi olduk. Bizim için her taşıma, bir referanstır. 
+                Sürecin başından sonuna kadar verdiğimiz sözlerin arkasında durar, eşyalarınızı kendi eşyamız gibi koruruz. 
+                Ücretsiz ekspertiz hizmetimizle yerinde tespit yapar, size en uygun fiyatı sunarız.
+            </p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>İşimizden Kareler</h2>
+            <p>Nasıl çalıştığımızı görün, kalitemize tanık olun.</p>
+            <div class="gallery-grid">
+                <img src="1.jpeg" alt="Özkanlar Nakliyat paketleme">
+                <img src="2.jpeg" alt="Özkanlar Nakliyat asansörlü taşıma">
+                <img src="4.jpeg" alt="Özkanlar Nakliyat kamyon yükleme">
+                <img src="12.jpeg" alt="Özkanlar Nakliyat profesyonel ekip">
+
+                <img src="5.jpeg" alt="Paketleme detayı">
+                <img src="6.jpeg" alt="Yeni nakliyat aracı">
+                <img src="7.jpeg" alt="Mobilya montaj hizmeti">
+                <img src="9.jpeg" alt="Ofis taşıma">
+            </div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <div class="container">
+            <h2>Çalışmamızdan Video</h2>
+            <p>Taşıma sürecini nasıl yönettiğimizi bizzat görün.</p>
+            
+            <div class="video-wrapper-shorts">
+                <iframe src="https://www.youtube.com/embed/j_JTFR7a06I" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>Müşterilerimiz Ne Dedi?</h2>
+            <div class="testimonial-card">
+                <p>"Söyledikleri saatte geldiler, eşyalarıma hiç zarar vermeden hızlıca taşıdılar. Çok memnun kaldım."</p>
+                <span>- Ayşe Y. / Kadıköy Taşıma</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"Şehirler arası taşımada Özkanlar Nakliyat'ı tercih ettim. Başta tereddütlerim vardı ama profesyonelliklerine hayran kaldım."</p>
+                <span>- Mehmet K. / Ankara Taşıma</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Taşınmaya Hazır Mısınız?</h2>
+            <p>Haftanın 7 günü bize ulaşabilirsiniz. Ücretsiz ekspertiz ve en iyi fiyat teklifi için şimdi arayın veya WhatsApp'tan yazın.</p>
+            
+            <a href="tel:+905364842127" class="cta-button btn-call">
+                📞 HEMEN ARAYIN
+            </a>
+            <a href="https://wa.me/+905364842127?text=Merhaba, sitenizden ulaşıyorum. Nakliyat hizmeti hakkında bilgi almak istiyorum." class="cta-button btn-whatsapp" target="_blank">
+                💬 WHATSAPP'TAN YAZIN
+            </a>
+
+            <div class="contact-details">
+                <p>
+                    <strong>Telefon:</strong> <a href="tel:+905364842127">0536 484 21 27</a><br>
+                    <strong>Adres:</strong> Avcılar, İstanbul
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Özkanlar Nakliyat. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
